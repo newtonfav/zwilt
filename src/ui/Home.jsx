@@ -58,6 +58,7 @@ function Home() {
           </ul>
         </div>
       </div>
+      {/* <div className="flex w-full justify-center bg-white p-20 [clip-path:polygon(0%_0%,_100%_0%,_100%_75%,_0_100%)]"></div> */}
     </div>
   );
 }

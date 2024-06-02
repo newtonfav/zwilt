@@ -14,10 +14,14 @@ export default {
       greydarker: "#D2D2D2",
       greylight: "#959595",
       darkwhite: "#F6F6F6",
+      tertiary: "#202229",
+      box1: "#EDEFFF",
+      box2: "#FFF7E1",
+      box3: "#F3F3F3",
     },
     extend: {
       height: {
-        screen: "100dvh",
+        screen: "95dvh",
       },
     },
   },
