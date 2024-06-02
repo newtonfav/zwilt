@@ -4,6 +4,7 @@ import Explore from "./ui/Explore";
 import Reviews from "./ui/Reviews";
 import Steps from "./ui/Steps";
 import Cta from "./ui/Cta";
+import HorizontalScroll from "./ui/HorizontalScroll";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Reviews />
       <Steps />
       <Cta />
+      <HorizontalScroll />
     </div>
   );
 }

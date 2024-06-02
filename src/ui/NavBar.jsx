@@ -3,7 +3,7 @@ import zwilt from "../assets/zwilt.svg";
 
 function NavBar() {
   return (
-    <div className="text-md mx-auto my-1 flex h-16 max-w-screen-2xl items-center justify-between rounded-[15px] bg-purple text-white shadow-2xl sm:px-3">
+    <div className="text-md mx-auto my-1 flex h-16 max-w-screen-2xl items-center justify-between rounded-[15px] bg-purple text-white drop-shadow-2xl sm:px-3">
       <div className="inline-flex">
         <img src={zwilt} alt="zwilt" className="p-1" />
         <img src={logo} alt="zwilt" />

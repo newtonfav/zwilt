@@ -18,6 +18,9 @@ export default {
       box1: "#EDEFFF",
       box2: "#FFF7E1",
       box3: "#F3F3F3",
+      fillPurple: "#50589F",
+      fillYellow: "#FFBE2E",
+      fillGreen: "#C7F4C2",
     },
     extend: {
       height: {
