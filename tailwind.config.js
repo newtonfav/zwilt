@@ -22,6 +22,7 @@ export default {
       fillPurple: "#50589F",
       fillYellow: "#FFBE2E",
       fillGreen: "#C7F4C2",
+      buttonColor: "#292B34",
     },
     extend: {
       height: {

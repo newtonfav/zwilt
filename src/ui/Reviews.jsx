@@ -6,11 +6,11 @@ import quotes from "../assets/quotes.svg";
 
 function Reviews() {
   return (
-    <div className="bg-tertiary relative -mt-20 flex h-screen flex-col items-center justify-start text-white [clip-path:polygon(0%_10%,_100%_0%,_100%_100%,_0_100%)]">
+    <div className="bg-tertiary relative -mt-20 flex flex-col items-center justify-start text-white [clip-path:polygon(0%_10%,_100%_0%,_100%_100%,_0_100%)]">
       <div className="self-end">
         <img src={quotes} alt="quotes" />
       </div>
-      <div className="my-32 ml-10 flex w-2/3 flex-row">
+      <div className="mb-56 ml-10 mt-20 flex w-2/3 flex-row">
         <div className="flex w-1/2 flex-col leading-10">
           <div className="text-[40px] font-bold">
             <h2>How it worked</h2>
