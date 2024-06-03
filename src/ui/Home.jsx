@@ -1,16 +1,45 @@
+import { useState } from "react";
 import avatar from "../assets/avatar.svg";
+import avatar2 from "../assets/avatar2.svg";
+// import avatar3 from "../assets/avatar3.svg";
+import avatarThree from "../assets/avatar-three.svg";
 import button from "../assets/button.svg";
 
 function Home() {
+  const [placeholder, setPlaceholder] = useState("Looking for design |");
+
+  function handlePlaceholderFocus() {
+    setPlaceholder("");
+  }
+  function handleMouseLeave() {
+    setPlaceholder("Looking for design |");
+  }
+
   return (
     <div className="flex h-screen flex-col items-center justify-start">
-      <div className="mb-8 mt-28 flex flex-col items-center text-[50px] font-bold leading-none">
-        <span className="inline-flex items-baseline">
+      <div className="mb-8 mt-28 flex flex-col items-center font-bold leading-none">
+        <span className="inline-flex items-center text-[55px]">
           Finding the right fit
-          <img src={avatar} alt="avatar" className="w-14" />
+          <span className="relative flex h-[57px] w-[86px]">
+            <img
+              src={avatar}
+              alt="avatar"
+              className="animate-slideLeft absolute z-30 w-[86px]"
+            />
+            <img
+              src={avatar2}
+              alt="avatar"
+              className="absolute -top-[0.05rem] left-[0.92rem] z-20"
+            />
+            <img
+              src={avatarThree}
+              alt="avatar"
+              className="animate-slideRight absolute -top-[0.1rem] left-[0.93rem] z-10"
+            />
+          </span>
           has
         </span>
-        <span>never been easier.</span>
+        <span className="text-[55px]">never been easier.</span>
       </div>
       <div className="my-1 flex flex-col items-center text-lg">
         <div>
@@ -26,7 +55,9 @@ function Home() {
         <input
           type="text"
           className="w-full rounded-[15px] p-5 focus:outline-none"
-          placeholder="Looking for design"
+          placeholder={placeholder}
+          onMouseEnter={handlePlaceholderFocus}
+          onMouseLeave={handleMouseLeave}
         />
         <button className="rounded-[15px] bg-yellow p-6">
           <img src={button} alt="button" className="w-7" />

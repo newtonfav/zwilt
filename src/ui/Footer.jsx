@@ -65,8 +65,8 @@ function Footer() {
 
       <div className="inline-flex border-t px-20 py-3 text-sm text-white">
         <div className="">All rights reserved by Zwilt</div>
-        <div className="ml-auto opacity-40">
-          <span>Privacy Policy</span>
+        <div className="ml-auto underline opacity-40">
+          <span className="mr-4">Privacy Policy</span>
           <span>Terms and Conditions</span>
         </div>
       </div>

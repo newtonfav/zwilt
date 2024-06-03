@@ -34,6 +34,21 @@ export default {
       gridTemplateColumns: {
         3: "repeat(2, 300px) 1fr",
       },
+
+      keyframes: {
+        slideLeft: {
+          "0%, 100%": { transform: "translateX(0)" },
+          "50%": { transform: "translateX(-10%)" },
+        },
+        slideRight: {
+          "0%, 100%": { transform: "translateX(0)" },
+          "50%": { transform: "translateX(20%)" },
+        },
+      },
+      animation: {
+        slideLeft: "slideLeft 2s infinite",
+        slideRight: "slideRight 2s infinite",
+      },
     },
   },
   plugins: [],
