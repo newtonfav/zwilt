@@ -12,6 +12,7 @@ export default {
       black: "#202229",
       bcolor: "#F0F0F0",
       greydarker: "#D2D2D2",
+      greydarkest: "#D6D6D6",
       greylight: "#959595",
       darkwhite: "#F6F6F6",
       tertiary: "#202229",
@@ -25,6 +26,12 @@ export default {
     extend: {
       height: {
         screen: "95dvh",
+      },
+      gridTemplateRows: {
+        8: "repeat(8, 100px)",
+      },
+      gridTemplateColumns: {
+        3: "repeat(2, 300px) 1fr",
       },
     },
   },

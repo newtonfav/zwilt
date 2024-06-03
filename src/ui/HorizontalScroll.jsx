@@ -59,7 +59,7 @@ function HorizontalScroll() {
   ];
 
   return (
-    <div className="from-box1 h-screen bg-gradient-to-t to-white">
+    <div className="from-box1 h-[110dvh] bg-gradient-to-t to-white">
       <div className="no-scrollbar my-44 flex flex-row items-center overflow-x-auto">
         <div className="flex">
           <div className="mx-44 flex w-[400px] flex-col self-center">
