@@ -38,16 +38,16 @@ export default {
       keyframes: {
         slideLeft: {
           "0%, 100%": { transform: "translateX(0)" },
-          "50%": { transform: "translateX(-10%)" },
+          "50%": { transform: "translateX(-15%)" },
         },
         slideRight: {
           "0%, 100%": { transform: "translateX(0)" },
-          "50%": { transform: "translateX(20%)" },
+          "50%": { transform: "translateX(25%)" },
         },
       },
       animation: {
-        slideLeft: "slideLeft 2s infinite",
-        slideRight: "slideRight 2s infinite",
+        slideLeft: "slideLeft 1.8s ease-out infinite",
+        slideRight: "slideRight 1.8s ease-out infinite",
       },
     },
   },

@@ -20,7 +20,7 @@ function Home() {
       <div className="mb-8 mt-28 flex flex-col items-center font-bold leading-none">
         <span className="inline-flex items-center text-[55px]">
           Finding the right fit
-          <span className="relative flex h-[57px] w-[86px]">
+          <span className="relative ml-[4px] flex h-[57px] w-[86px]">
             <img
               src={avatar}
               alt="avatar"
