@@ -34,7 +34,7 @@ function NavBar() {
 
       {/* Mobile Navigation Dropdown */}
       {menuOpen && (
-        <div className="absolute right-0 top-16 z-50 mt-2 w-full rounded-[16px] bg-purple text-white shadow-lg md:hidden">
+        <div className="absolute right-0 top-16 z-50 mt-2 w-[98%] rounded-[16px] bg-purple text-white shadow-lg md:hidden">
           <div className="flex flex-col items-start p-4">
             <div className="m-2">Find Work</div>
             <div className="m-2">Find Talents</div>
