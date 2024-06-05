@@ -1,16 +1,51 @@
+/* eslint-disable react/prop-types */
+import { useState } from "react";
 import step from "../assets/step.svg";
 import step_focus from "../assets/step_focus.svg";
 
 function Steps() {
+  const steps = [
+    {
+      step: "Step 1",
+      header: " Resume Screening",
+      details:
+        "Candidates are assessed through skill based questions in a virtual setting. Allowing you to gauge personality and cultural fit.",
+    },
+    {
+      step: "Step 3",
+      header: "Video Interview",
+      details:
+        "Candidates are assessed through skill based questions in a virtual setting. Allowing you to gauge personality and cultural fit.",
+    },
+    {
+      step: "Step 3",
+      header: " Technical Interview",
+      details:
+        "Candidates are assessed through skill based questions in a virtual setting. Allowing you to gauge personality and cultural fit.",
+    },
+    {
+      step: "Step 3",
+      header: " Application Review",
+      details:
+        "Candidates are assessed through skill based questions in a virtual setting. Allowing you to gauge personality and cultural fit.",
+    },
+    {
+      step: "Step 3",
+      header: "Let's get to work",
+      details:
+        "Candidates are assessed through skill based questions in a virtual setting. Allowing you to gauge personality and cultural fit.",
+    },
+  ];
+
   return (
     <div className="flex flex-col justify-center bg-white">
-      <div className="mx-44 mt-44">
-        <div className="text-[40px] font-bold leading-none">
+      <div className="mx-20 mb-20 mt-44 tabletPortrait:mx-8 tabletPortrait:mt-20 phone:mx-3">
+        <div className="mb-4 text-[2.6rem] font-bold leading-none tabletPortrait:text-[2rem]">
           <h2>How we ensure you’re</h2>
           <h2>in good hands.</h2>
         </div>
 
-        <div className="text-md flex w-4/5 flex-col font-thin">
+        <div className="text-md flex w-full flex-col font-thin">
           <span>
             With our comprehensive screening process, we hand-pick highly
           </span>
@@ -19,164 +54,47 @@ function Steps() {
           </span>
         </div>
 
-        <div className="my-6 font-thin">
-          <div className="my-3 w-5/12 rounded-[7px] border-[1.5px] border-solid border-bcolor p-2">
-            <button className="inline-flex items-center">
-              <img src={step} alt="button" className="mr-3 w-12" />
-              <span>
-                <span className="font-semibold">Step 1:</span> Resume Screening
-              </span>
-            </button>
-            <div className="mx-2 my-3 hidden text-wrap text-sm">
-              Candidates are assessed through skill based questions in a virtual
-              setting. Allowing you to gauge personality and cultural fit.
-            </div>
-          </div>
-
-          <div className="my-3 w-5/12 rounded-[7px] border-[1.5px] border-solid border-bcolor p-2">
-            <button className="inline-flex items-center">
-              <img src={step_focus} alt="button" className="mr-3 w-12" />
-              <span>
-                <span className="font-semibold">Step 2:</span> Video Interview
-              </span>
-            </button>
-            <div className="mx-2 my-3 text-wrap text-sm">
-              Candidates are assessed through skill based questions in a virtual
-              setting. Allowing you to gauge personality and cultural fit.
-            </div>
-          </div>
-
-          <div className="my-3 w-5/12 rounded-[7px] border-[1.5px] border-solid border-bcolor p-2">
-            <button className="inline-flex items-center">
-              <img src={step} alt="button" className="mr-3 w-12" />
-              <span>
-                <span className="font-semibold">Step 3:</span> Technical
-                Interview
-              </span>
-            </button>
-            <div className="mx-2 my-3 hidden text-wrap text-sm">
-              Candidates are assessed through skill based questions in a virtual
-              setting. Allowing you to gauge personality and cultural fit.
-            </div>
-          </div>
-
-          <div className="my-3 w-5/12 rounded-[7px] border-[1.5px] border-solid border-bcolor p-2">
-            <button className="inline-flex items-center">
-              <img src={step} alt="button" className="mr-3 w-12" />
-              <span>
-                <span className="font-semibold">Step 4:</span> Application
-                Review
-              </span>
-            </button>
-            <div className="mx-2 my-3 hidden text-wrap text-sm">
-              Candidates are assessed through skill based questions in a virtual
-              setting. Allowing you to gauge personality and cultural fit.
-            </div>
-          </div>
-
-          <div className="my-3 w-5/12 rounded-[7px] border-[1.5px] border-solid border-bcolor p-2">
-            <button className="inline-flex items-center">
-              <img src={step} alt="button" className="mr-3 w-12" />
-              <span>
-                <span className="font-semibold">Step 5:</span> Lets get to work
-              </span>
-            </button>
-            <div className="mx-2 my-3 hidden text-wrap text-sm">
-              Candidates are assessed through skill based questions in a virtual
-              setting. Allowing you to gauge personality and cultural fit.
-            </div>
-          </div>
+        <div className="my-6 h-[500px] font-thin">
+          {steps.map((step) => (
+            <Step
+              stepNum={step.step}
+              header={step.header}
+              details={step.details}
+              key={step.step}
+            />
+          ))}
         </div>
       </div>
     </div>
-
-    // <div className="-mt-28 flex flex-col justify-center bg-white [clip-path:polygon(0%_10%,_100%_0%,_100%_100%,_0_100%)]">
-    //   <div className="mx-44 mt-44">
-    //     <div className="my-8 text-[40px] font-bold leading-none">
-    //       <h2>How we ensure you’re</h2>
-    //       <h2>in good hands.</h2>
-    //     </div>
-
-    //     <div className="text-md flex w-4/5 flex-col font-thin">
-    //       <span>
-    //         With our comprehensive screening process, we hand-pick highly
-    //       </span>
-    //       <span>
-    //         skilled candidates so you can onboard them in a matter of days.
-    //       </span>
-    //     </div>
-
-    //     <div className="my-6 font-thin">
-    //       <div className="border-bcolor my-3 w-5/12 rounded-[7px] border-[1.5px] border-solid p-2">
-    //         <button className="inline-flex items-center">
-    //           <img src={step} alt="button" className="mr-3 w-12" />
-    //           <span>
-    //             <span className="font-semibold">Step 1:</span> Resume Screening
-    //           </span>
-    //         </button>
-    //         <div className="mx-2 my-3 hidden text-wrap text-sm">
-    //           Candidates are assessed through skill based questions in a virtual
-    //           setting. Allowing you to gauge personality and cultural fit.
-    //         </div>
-    //       </div>
-
-    //       <div className="border-bcolor my-3 w-5/12 rounded-[7px] border-[1.5px] border-solid p-2">
-    //         <button className="inline-flex items-center">
-    //           <img src={step_focus} alt="button" className="mr-3 w-12" />
-    //           <span>
-    //             <span className="font-semibold">Step 2:</span> Video Interview
-    //           </span>
-    //         </button>
-    //         <div className="mx-2 my-3 text-wrap text-sm">
-    //           Candidates are assessed through skill based questions in a virtual
-    //           setting. Allowing you to gauge personality and cultural fit.
-    //         </div>
-    //       </div>
-
-    //       <div className="border-bcolor my-3 w-5/12 rounded-[7px] border-[1.5px] border-solid p-2">
-    //         <button className="inline-flex items-center">
-    //           <img src={step} alt="button" className="mr-3 w-12" />
-    //           <span>
-    //             <span className="font-semibold">Step 3:</span> Technical
-    //             Interview
-    //           </span>
-    //         </button>
-    //         <div className="mx-2 my-3 hidden text-wrap text-sm">
-    //           Candidates are assessed through skill based questions in a virtual
-    //           setting. Allowing you to gauge personality and cultural fit.
-    //         </div>
-    //       </div>
-
-    //       <div className="border-bcolor my-3 w-5/12 rounded-[7px] border-[1.5px] border-solid p-2">
-    //         <button className="inline-flex items-center">
-    //           <img src={step} alt="button" className="mr-3 w-12" />
-    //           <span>
-    //             <span className="font-semibold">Step 4:</span> Application
-    //             Review
-    //           </span>
-    //         </button>
-    //         <div className="mx-2 my-3 hidden text-wrap text-sm">
-    //           Candidates are assessed through skill based questions in a virtual
-    //           setting. Allowing you to gauge personality and cultural fit.
-    //         </div>
-    //       </div>
-
-    //       <div className="border-bcolor my-3 w-5/12 rounded-[7px] border-[1.5px] border-solid p-2">
-    //         <button className="inline-flex items-center">
-    //           <img src={step} alt="button" className="mr-3 w-12" />
-    //           <span>
-    //             <span className="font-semibold">Step 5:</span> Lets get to work
-    //           </span>
-    //         </button>
-    //         <div className="mx-2 my-3 hidden text-wrap text-sm">
-    //           Candidates are assessed through skill based questions in a virtual
-    //           setting. Allowing you to gauge personality and cultural fit.
-    //         </div>
-    //       </div>
-    //     </div>
-    //   </div>
-    // </div>
   );
+
+  function Step({ stepNum, header, details }) {
+    const [isActive, setIsActive] = useState(false);
+
+    return (
+      <div
+        className="my-3 w-1/2 rounded-[7px] border-[1.5px] border-solid border-bcolor p-2 tabletLandscape:w-10/12 tabletPortrait:w-full"
+        onMouseEnter={() => setIsActive(true)}
+        onMouseLeave={() => setIsActive(false)}
+      >
+        <button className="inline-flex items-center">
+          <img
+            src={isActive ? step_focus : step}
+            alt="button"
+            className="mr-3 w-12"
+          />
+          <span>
+            <span className="font-semibold">{stepNum}:</span> {header}
+          </span>
+        </button>
+        <div
+          className={`mx-2 my-3 transition-all duration-300 ease-in-out ${isActive ? "max-h-[1000px] opacity-100" : "max-h-0 opacity-0"} overflow-hidden text-wrap text-sm`}
+        >
+          {details}
+        </div>
+      </div>
+    );
+  }
 }
 
 export default Steps;

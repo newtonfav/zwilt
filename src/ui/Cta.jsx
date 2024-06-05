@@ -11,7 +11,7 @@ import groupTwo from "../assets/group-two.svg";
 function Cta() {
   return (
     <div className="flex flex-col items-center justify-center">
-      <div className="my-28 text-[40px] font-bold">
+      <div className="my-28 text-[40px] font-bold phone:my-10 phone:text-[2rem]">
         <h2>Start your journey today.</h2>
       </div>
 
@@ -22,12 +22,12 @@ function Cta() {
         action={"Join Now"}
         id={"box1"}
       >
-        <div className="mb-4 text-[35px] font-bold leading-none">
+        <div className="mb-4 text-[35px] font-bold leading-none tabletPortrait:text-[1.5rem] phone:mb-2 phone:text-[1.5rem]">
           <p>Find your next star </p>
           <p> performer.</p>
         </div>
 
-        <div className="mb-4 text-sm">
+        <div className="mb-4 text-sm phone:text-[0.8rem]">
           <p> Assess the candidate through work history, transparent </p>
           <p>tests and video interviews.</p>
         </div>
@@ -40,12 +40,12 @@ function Cta() {
         action={"Browse More"}
         id={"box2"}
       >
-        <div className="mb-4 text-[35px] font-bold leading-none">
+        <div className="mb-4 text-[35px] font-bold leading-none tabletPortrait:text-[1.5rem] phone:mb-2 phone:text-[1.5rem]">
           <p>Evaluate to your </p>
           <p> heart’s content.</p>
         </div>
 
-        <div className="mb-4 text-sm">
+        <div className="mb-4 text-sm phone:text-[0.8rem]">
           <p>Explore the vast Zwilt marketplace to find the candidate</p>
           <p>that meets your needs.</p>
         </div>
@@ -58,12 +58,12 @@ function Cta() {
         action={"Join Now"}
         id={"box3"}
       >
-        <div className="mb-4 text-[35px] font-bold leading-none">
+        <div className="mb-4 text-[35px] font-bold leading-none tabletPortrait:text-[1.5rem] phone:mb-2 phone:text-[1.5rem]">
           <p>Start building </p>
           <p> your team.</p>
         </div>
 
-        <div className="mb-4 text-sm">
+        <div className="mb-4 text-sm phone:text-[0.8rem]">
           <p>Onboard your candidate right away and start </p>
           <p>creating the next big thing.</p>
         </div>
@@ -74,17 +74,24 @@ function Cta() {
   function Box({ num, image, children, bgColor, action, id }) {
     return (
       <div
-        className={`${bgColor} my-4 flex w-4/5 -skew-y-[3deg] flex-row overflow-hidden px-2`}
+        className={`${bgColor} smallPhone:flex-col-reverse my-4 flex w-4/5 -skew-y-[3deg] flex-row overflow-hidden px-2 tabletLandscape:w-full tabletPortrait:skew-y-0`}
       >
-        <div className="my-4 inline-flex skew-y-[3deg] items-center">
+        <div className="my-4 inline-flex skew-y-[3deg] items-center tabletPortrait:skew-y-0">
           <div className="m-5 mb-24">
             <img src={num} alt="" />
           </div>
 
           <div className="">
-            {/* <div className={`${id === "box3" ? "w-4/12" : "mr-8 w-4/12"} `}> */}
             <div className="flex flex-col">
-              {children} <ActionButton text={action} logo={whitelogo} />
+              {children}{" "}
+              <ActionButton
+                text={action}
+                logo={whitelogo}
+                customScreen={
+                  "tabletPortrait:p-[1rem] phone:p-[0.5rem] phone:w-max"
+                }
+                textSize={"phone:text-[0.8rem]"}
+              />
             </div>
           </div>
         </div>
@@ -92,33 +99,12 @@ function Cta() {
           <img
             src={image}
             alt="developers"
-            className={`${id === "box3" ? "h-[388px]" : ""}`}
+            className={`${id === "box3" ? "h-[388px] tabletPortrait:h-max" : ""} phone:w-[20rem]`}
           />
         </div>
       </div>
     );
   }
-  // function Box({ num, image, children, bgColor, action, id }) {
-  //   return (
-  //     <div
-  //       className={`${bgColor} -mt-16 inline-flex h-full w-4/5 items-center [clip-path:polygon(0%_20%,_100%_0%,_100%_80%,_0_100%)]`}
-  //     >
-  //       <div className="m-5 mb-24">
-  //         <img src={num} alt="" />
-  //       </div>
-
-  //       <div className={`${id === "box3" ? "w-4/12" : "mr-8 w-4/12"} `}>
-  //         <div className="mt-8 flex flex-col">
-  //           {children} <ActionButton text={action} logo={whitelogo} />
-  //         </div>
-  //       </div>
-
-  //       <div className={`images ${id === "box3" ? "ml-52" : "ml-72"}`}>
-  //         <img src={image} alt="developers" className="image" />
-  //       </div>
-  //     </div>
-  //   );
-  // }
 }
 
 export default Cta;

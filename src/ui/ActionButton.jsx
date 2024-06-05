@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
+import ScreenSize from "./helper/screenSize";
 
 function ActionButton({
   logo,
@@ -7,10 +8,15 @@ function ActionButton({
   style,
   padding,
   borderRadius,
-  // textSize,
+  textSize,
   disableAnimation,
+  customScreen,
 }) {
   const [isActive, setIsActive] = useState(false);
+
+  const windowWidth = ScreenSize();
+
+  if (windowWidth <= 639) disableAnimation = true;
 
   return (
     <button
@@ -19,7 +25,7 @@ function ActionButton({
       onMouseLeave={() => setIsActive(false)}
     >
       <span
-        className={`mr-2 bg-black transition-all duration-300 ease-in-out ${isActive && !disableAnimation ? "w-52" : "w-20"} ${borderRadius ? borderRadius : "rounded-[30px]"} ${padding ? padding : "p-[1.5rem]"} `}
+        className={`mr-2 bg-black transition-all duration-300 ${customScreen} ease-in-out ${isActive && !disableAnimation ? "w-52" : "w-20"} ${borderRadius ? borderRadius : "rounded-[30px]"} ${padding ? padding : "p-[1.5rem]"} `}
       >
         <img
           src={logo}
@@ -28,7 +34,7 @@ function ActionButton({
         />
       </span>
       <span
-        className={`inline-flex text-nowrap font-bold transition-all duration-300 ${isActive && !disableAnimation ? `${text === "Join Now" ? "-translate-x-[200%]" : "-translate-x-[170%]"} text-white` : ""}`}
+        className={`inline-flex text-nowrap font-bold transition-all duration-300 ${isActive && !disableAnimation ? `${text === "Join Now" ? "-translate-x-[200%]" : "-translate-x-[170%]"} text-white` : ""} ${textSize}`}
       >
         {text}
       </span>
