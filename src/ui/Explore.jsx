@@ -104,7 +104,7 @@ function Explore() {
         <div className="mb-3 flex flex-col text-[1.25rem] font-medium">
           {children}
         </div>
-        <div className="text-sm font-thin">
+        <div className="text-sm font-light">
           <ul className="grid grid-flow-col grid-rows-2 gap-2">
             <li className="flex items-center">
               <img src={badge} alt="badge" className="mr-2" />
