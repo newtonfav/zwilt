@@ -17,4 +17,16 @@
     @apply text-black;
     @apply font-medium;
   }
+
+  .strip {
+    background: linear-gradient(0.25turn, #edefff, #525aa0, #edefff);
+  }
+
+  .actionButtonText {
+    @apply animate-moveIn;
+  }
+
+  .actionButtonLogo {
+    @apply animate-moveOut;
+  }
 }

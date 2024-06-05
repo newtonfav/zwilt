@@ -6,6 +6,7 @@ import Steps from "./ui/Steps";
 import Cta from "./ui/Cta";
 import HorizontalScroll from "./ui/HorizontalScroll";
 import Faq from "./ui/Faq";
+import Strips from "./ui/Strips";
 import Footer from "./ui/Footer";
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
     <div className="bg-white px-3 lg:p-5">
       <NavBar />
       <Home />
+      <Strips />
       <Explore />
       <Reviews />
       <Steps />

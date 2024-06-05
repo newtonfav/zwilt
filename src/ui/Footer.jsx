@@ -18,6 +18,7 @@ function Footer() {
               style={"rotate-90"}
               padding={"p-8"}
               borderRadius={"rounded-[30px]"}
+              disableAnimation={true}
             />
           </div>
         </div>

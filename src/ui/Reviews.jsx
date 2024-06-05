@@ -6,21 +6,25 @@ import quotes from "../assets/quotes.svg";
 
 function Reviews() {
   return (
-    <div className="bg-tertiary relative -mt-20 flex flex-col items-center justify-start text-white [clip-path:polygon(0%_10%,_100%_0%,_100%_100%,_0_100%)]">
+    <div className="relative flex -skew-y-[3deg] flex-col items-center justify-start bg-tertiary text-white">
       <div className="self-end">
         <img src={quotes} alt="quotes" />
       </div>
-      <div className="mb-56 ml-10 mt-20 flex w-2/3 flex-row">
-        <div className="flex w-1/2 flex-col leading-10">
-          <div className="text-[40px] font-bold">
+      <div className="mb-56 ml-10 mt-20 flex w-10/12 skew-y-[3deg] flex-row tabletLandscape:w-11/12 tabletPortrait:flex-col phone:ml-[0px]">
+        <div className="mb-12 flex w-1/2 flex-col leading-10 tabletPortrait:w-full tabletPortrait:pl-12 phone:pl-3">
+          <div className="smallPhone:text-[2rem] text-[4rem] font-bold leading-[1] desktop:text-[3rem] phone:text-[2.5rem]">
             <h2>How it worked</h2>
             <h2 className="inline-flex items-center">
               for Jason
-              <img src={avatar2} alt="avatar" className="w-15 m-2" />
+              <img src={avatar2} alt="avatar" className="smallPhone:w-12 m-2" />
               at
             </h2>
             <h2 className="">
-              <img src={groove} alt="groove logo" className="w-32" />
+              <img
+                src={groove}
+                alt="groove logo"
+                className="smallPhone:w-28 w-32"
+              />
             </h2>
           </div>
           <div className="my-3 w-8/12 font-thin leading-6">
@@ -37,7 +41,7 @@ function Reviews() {
           </div>
         </div>
 
-        <div className="flex w-1/2 flex-col">
+        <div className="flex w-1/2 flex-col tabletPortrait:w-10/12 tabletPortrait:pl-12 phone:w-full phone:pl-3">
           <div className="mb-5 inline-flex items-center">
             <div className="mr-3">
               <img src={groove2} alt="groove logo" className="w-16" />
@@ -48,7 +52,7 @@ function Reviews() {
               <span className="text-sm font-thin">San Francisco</span>
             </div>
           </div>
-          <div className="w-4/5">
+          <div className="w-4/5 tabletPortrait:w-full">
             Zwilt enabled us to deliver on time and they’ve been heavy hitters
             in our corner since. Zwilt enabled us to deliver on time and they’ve
             been heavy hitters in our corner since.Zwilt enabled us to deliver

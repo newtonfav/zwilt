@@ -60,15 +60,15 @@ function HorizontalScroll() {
 
   return (
     <div className="from-box1 h-[110dvh] bg-gradient-to-t to-white">
-      <div className="no-scrollbar my-44 flex flex-row items-center overflow-x-auto">
-        <div className="flex">
-          <div className="mx-44 flex w-[400px] flex-col self-center">
-            <div className="mb-6 text-[50px] font-extrabold leading-none">
+      <div className="no-scrollbar my-44 flex flex-col items-center overflow-x-auto md:flex-row">
+        <div className="flex flex-col md:flex-row">
+          <div className="mx-8 flex w-[90%] flex-col self-center md:mx-44 md:w-[400px]">
+            <div className="mb-6 text-[30px] font-extrabold leading-none md:text-[50px]">
               Why choose
               <br />
               Zwilt?
             </div>
-            <div className="text-[20px] font-thin">
+            <div className="text-[16px] font-thin md:text-[20px]">
               We take complex hiring <br />
               processes - and simplify them. <br />
               Connecting you to the world’s <br /> highly qualified talent pool.
@@ -89,6 +89,37 @@ function HorizontalScroll() {
       </div>
     </div>
   );
+  // return (
+  //   <div className="from-box1 h-[110dvh] bg-gradient-to-t to-white">
+  //     <div className="no-scrollbar my-44 flex flex-row items-center overflow-x-auto">
+  //       <div className="flex">
+  //         <div className="mx-44 flex w-[400px] flex-col self-center">
+  //           <div className="mb-6 text-[50px] font-extrabold leading-none">
+  //             Why choose
+  //             <br />
+  //             Zwilt?
+  //           </div>
+  //           <div className="text-[20px] font-thin">
+  //             We take complex hiring <br />
+  //             processes - and simplify them. <br />
+  //             Connecting you to the world’s <br /> highly qualified talent pool.
+  //           </div>
+  //         </div>
+
+  //         {cards.map((card) => (
+  //           <Card
+  //             key={card.key}
+  //             header={card.header}
+  //             details={card.details}
+  //             id={card.id}
+  //             bullet={card.bullet}
+  //             images={card.images}
+  //           />
+  //         ))}
+  //       </div>
+  //     </div>
+  //   </div>
+  // );
 
   function Card({ header, details, bullet, id }) {
     function renderImages(id) {
@@ -102,7 +133,7 @@ function HorizontalScroll() {
     }
 
     return (
-      <div className="mb-8 mr-4 flex w-[1100px] items-center rounded-[20px] bg-white p-12 drop-shadow-xl">
+      <div className="mb-8 mr-4 flex w-[1100px] items-center overflow-hidden rounded-[20px] bg-white p-12 drop-shadow-xl">
         <div className="box1">
           <div className="mb-5 w-2/3 text-wrap text-[50px] font-bold leading-none">
             {header}

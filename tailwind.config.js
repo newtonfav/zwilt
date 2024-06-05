@@ -23,6 +23,8 @@ export default {
       fillYellow: "#FFBE2E",
       fillGreen: "#C7F4C2",
       buttonColor: "#292B34",
+      stripMiddle: "#525AA0",
+      stripEnd: "#A285D0",
     },
     extend: {
       height: {
@@ -32,9 +34,27 @@ export default {
         8: "repeat(8, 100px)",
       },
       gridTemplateColumns: {
-        3: "repeat(2, 300px) 1fr",
+        3: "repeat(2, 20%) 1fr",
       },
+      screens: {
+        largeDesktop: { max: "1535px" },
+        // => @media (max-width: 1535px) { ... }
 
+        desktop: { max: "1279px" },
+        // => @media (max-width: 1279px) { ... }
+
+        tabletLandscape: { max: "1023px" },
+        // => @media (max-width: 1023px) { ... }
+
+        tabletPortrait: { max: "767px" },
+        // => @media (max-width: 767px) { ... }
+
+        phone: { max: "639px" },
+        // => @media (max-width: 639px) { ... }
+        // smallScreen: { max: "460px" },
+
+        smallPhone: { max: "380px" },
+      },
       keyframes: {
         slideLeft: {
           "0%, 100%": { transform: "translateX(0)" },
@@ -46,8 +66,8 @@ export default {
         },
       },
       animation: {
-        slideLeft: "slideLeft 1.8s ease-out infinite",
-        slideRight: "slideRight 1.8s ease-out infinite",
+        slideLeft: "slideLeft 1.7s ease-out infinite",
+        slideRight: "slideRight 1.7s ease-out infinite",
       },
     },
   },

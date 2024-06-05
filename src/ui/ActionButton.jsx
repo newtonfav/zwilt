@@ -1,14 +1,38 @@
 /* eslint-disable react/prop-types */
-function ActionButton({ logo, text, style, padding, borderRadius }) {
+import { useState } from "react";
+
+function ActionButton({
+  logo,
+  text,
+  style,
+  padding,
+  borderRadius,
+  // textSize,
+  disableAnimation,
+}) {
+  const [isActive, setIsActive] = useState(false);
+
   return (
-    <div className={`inline-flex items-center ${style}`}>
+    <button
+      className={`inline-flex items-center ${style}`}
+      onMouseEnter={() => setIsActive(true)}
+      onMouseLeave={() => setIsActive(false)}
+    >
       <span
-        className={`bg-black mr-2 ${borderRadius ? borderRadius : "rounded-[15px]"} ${padding ? padding : "p-5"}`}
+        className={`mr-2 bg-black transition-all duration-300 ease-in-out ${isActive && !disableAnimation ? "w-52" : "w-20"} ${borderRadius ? borderRadius : "rounded-[30px]"} ${padding ? padding : "p-[1.5rem]"} `}
       >
-        <img src={logo} alt="" className="w-5" />
+        <img
+          src={logo}
+          alt=""
+          className={`w-5 ${isActive && !disableAnimation ? "translate-x-[700%]" : ""}`}
+        />
       </span>
-      <span className="text-lg font-bold">{text}</span>
-    </div>
+      <span
+        className={`inline-flex text-nowrap font-bold transition-all duration-300 ${isActive && !disableAnimation ? `${text === "Join Now" ? "-translate-x-[200%]" : "-translate-x-[170%]"} text-white` : ""}`}
+      >
+        {text}
+      </span>
+    </button>
   );
 }
 
