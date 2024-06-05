@@ -45,7 +45,7 @@ function Steps() {
           <h2>in good hands.</h2>
         </div>
 
-        <div className="text-md flex w-full flex-col font-thin">
+        <div className="text-md flex w-full flex-col font-light">
           <span>
             With our comprehensive screening process, we hand-pick highly
           </span>

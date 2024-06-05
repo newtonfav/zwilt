@@ -27,7 +27,7 @@ function Footer() {
         <div className="mb-32 flex w-11/12 flex-row text-white tabletLandscape:flex-col">
           <div className="flex w-2/5 flex-col tabletLandscape:mb-8 tabletPortrait:ml-auto tabletPortrait:w-11/12">
             <Logo style={"mb-8"} />
-            <div className="mb-8 font-thin">
+            <div className="mb-8 font-light">
               We take complex hiring processes - and <br /> simplify them.
               Connecting you to the world’s <br /> highly qualified talent pool.
             </div>

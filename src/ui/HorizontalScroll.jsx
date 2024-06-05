@@ -68,7 +68,7 @@ function HorizontalScroll() {
               <br />
               Zwilt?
             </div>
-            <div className="text-[20px] font-thin">
+            <div className="text-[20px] font-light">
               We take complex hiring <br />
               processes - and simplify them. <br />
               Connecting you to the world’s <br /> highly qualified talent pool.

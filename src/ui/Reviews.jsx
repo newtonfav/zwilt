@@ -34,7 +34,7 @@ function Reviews() {
               />
             </h2>
           </div>
-          <div className="my-3 w-8/12 font-thin leading-6">
+          <div className="my-3 w-8/12 font-light leading-6">
             Zwilt enabled us to deliver on time and they’ve been heavy hitters
             in our corner since.
           </div>
