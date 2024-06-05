@@ -54,7 +54,7 @@ function Steps() {
           </span>
         </div>
 
-        <div className="my-6 h-[500px] font-thin">
+        <div className="my-6 h-[500px] font-light">
           {steps.map((step) => (
             <Step
               stepNum={step.step}
@@ -73,7 +73,7 @@ function Steps() {
 
     return (
       <div
-        className="my-3 w-1/2 rounded-[7px] border-[1.5px] border-solid border-bcolor p-2 tabletLandscape:w-10/12 tabletPortrait:w-full"
+        className={`my-3 w-1/2 rounded-[7px] border-[1.5px] border-solid border-bcolor p-2 tabletLandscape:w-10/12 tabletPortrait:w-full ${isActive ? "shadow-lg" : ""}`}
         onMouseEnter={() => setIsActive(true)}
         onMouseLeave={() => setIsActive(false)}
       >

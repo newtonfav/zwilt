@@ -59,16 +59,16 @@ function HorizontalScroll() {
   ];
 
   return (
-    <div className="from-box1 h-[110dvh] bg-gradient-to-t to-white">
-      <div className="no-scrollbar my-44 flex flex-col items-center overflow-x-auto md:flex-row">
-        <div className="flex flex-col md:flex-row">
-          <div className="mx-8 flex w-[90%] flex-col self-center md:mx-44 md:w-[400px]">
-            <div className="mb-6 text-[30px] font-extrabold leading-none md:text-[50px]">
+    <div className="h-max bg-gradient-to-t from-box1 to-white pb-32">
+      <div className="no-scrollbar my-44 flex flex-row items-center overflow-x-auto tabletPortrait:flex-col">
+        <div className="flex flex-row tabletPortrait:flex-col">
+          <div className="mx-44 flex w-[400px] flex-col self-center tabletPortrait:w-2/3 tabletPortrait:pl-3">
+            <div className="mb-6 text-[3.1rem] font-extrabold leading-none tabletPortrait:text-[2rem]">
               Why choose
               <br />
               Zwilt?
             </div>
-            <div className="text-[16px] font-thin md:text-[20px]">
+            <div className="text-[20px] font-thin">
               We take complex hiring <br />
               processes - and simplify them. <br />
               Connecting you to the world’s <br /> highly qualified talent pool.
@@ -89,37 +89,6 @@ function HorizontalScroll() {
       </div>
     </div>
   );
-  // return (
-  //   <div className="from-box1 h-[110dvh] bg-gradient-to-t to-white">
-  //     <div className="no-scrollbar my-44 flex flex-row items-center overflow-x-auto">
-  //       <div className="flex">
-  //         <div className="mx-44 flex w-[400px] flex-col self-center">
-  //           <div className="mb-6 text-[50px] font-extrabold leading-none">
-  //             Why choose
-  //             <br />
-  //             Zwilt?
-  //           </div>
-  //           <div className="text-[20px] font-thin">
-  //             We take complex hiring <br />
-  //             processes - and simplify them. <br />
-  //             Connecting you to the world’s <br /> highly qualified talent pool.
-  //           </div>
-  //         </div>
-
-  //         {cards.map((card) => (
-  //           <Card
-  //             key={card.key}
-  //             header={card.header}
-  //             details={card.details}
-  //             id={card.id}
-  //             bullet={card.bullet}
-  //             images={card.images}
-  //           />
-  //         ))}
-  //       </div>
-  //     </div>
-  //   </div>
-  // );
 
   function Card({ header, details, bullet, id }) {
     function renderImages(id) {
@@ -133,9 +102,9 @@ function HorizontalScroll() {
     }
 
     return (
-      <div className="mb-8 mr-4 flex w-[1100px] items-center overflow-hidden rounded-[20px] bg-white p-12 drop-shadow-xl">
+      <div className="tabletMedium:flex-col mb-8 mr-4 flex w-[1100px] items-center overflow-hidden rounded-[20px] bg-white p-12 drop-shadow-xl tabletPortrait:m-[2rem] tabletPortrait:w-11/12 tabletPortrait:items-center">
         <div className="box1">
-          <div className="mb-5 w-2/3 text-wrap text-[50px] font-bold leading-none">
+          <div className="mb-5 w-2/3 text-wrap text-[50px] font-bold leading-none tabletPortrait:text-[2rem]">
             {header}
           </div>
           <div className="mb-8">
@@ -159,38 +128,38 @@ function Details({ detail, bullet }) {
       <span className="mr-3">
         <img src={bullet} alt="bullet point" />
       </span>
-      <span className="text-[18px]">{detail}</span>
+      <span className="text-[18px] tabletPortrait:text-[0.8rem]">{detail}</span>
     </li>
   );
 }
 
 function CardOneImages() {
   return (
-    <div className="relative left-[-9rem] h-[75dvh] w-[300px]">
+    <div className="relative left-[-9rem] h-[75dvh] w-[300px] tabletPortrait:hidden">
       <img
         src={frame1}
         alt="image"
-        className="absolute left-[2rem] top-[7rem] z-40"
+        className="absolute left-[2rem] top-[5rem] z-40"
       />
       <img
         src={frame2}
         alt="image"
-        className="absolute right-[5rem] top-[1rem] z-30"
+        className="absolute -top-[1rem] right-[5rem] z-30"
       />
       <img
         src={frame3}
         alt="image"
-        className="absolute right-[8rem] top-[25rem] z-20"
+        className="horizontal:hidden absolute right-[8rem] top-[23rem] z-20 tabletLandscape:hidden"
       />
       <img
         src={frame4}
         alt="image"
-        className="absolute left-[10rem] top-[24rem] z-10"
+        className="horizontal:hidden absolute left-[10rem] top-[22rem] z-10 tabletLandscape:hidden"
       />
       <img
         src={star}
         alt="image"
-        className="absolute left-[22rem] top-[5rem] z-50"
+        className={`absolute left-[22rem] top-[3rem] z-50`}
       />
     </div>
   );
@@ -198,13 +167,21 @@ function CardOneImages() {
 
 function CardTwoImages() {
   return (
-    <div className="relative left-[-9rem] h-[75dvh] w-[500px]">
-      <img src={chatTwo} alt="image" className="absolute left-[6rem] z-30" />
-      <img src={avatarOne} alt="avatar" className="absolute left-[2rem]" />
+    <div className="relative left-[-9rem] h-[75dvh] w-[500px] tabletPortrait:hidden">
+      <img
+        src={chatTwo}
+        alt="image"
+        className="horizontal:top-[1rem] absolute -top-[1rem] left-[6rem] z-30 tabletLandscape:top-[1rem]"
+      />
+      <img
+        src={avatarOne}
+        alt="avatar"
+        className="absolute -top-[1rem] left-[2rem]"
+      />
       <img
         src={avatarTwo}
         alt="avatar"
-        className="absolute left-[32rem] top-[8rem] z-40"
+        className="absolute left-[32rem] top-[6rem] z-40"
       />
     </div>
   );
@@ -212,18 +189,22 @@ function CardTwoImages() {
 
 function CardThreeImages() {
   return (
-    <div className="relative left-[-9rem] h-[75dvh] w-[400px]">
+    <div className="relative left-[-9rem] h-[75dvh] w-[400px] tabletPortrait:hidden">
       <img
         src={activityBarTwo}
         alt="image"
-        className="absolute -top-[5rem] left-[2rem] z-20"
+        className="horizontal:hidden absolute -top-[3rem] left-[2rem] z-20"
       />
       <img
         src={activityBar}
         alt="image"
-        className="absolute left-[12rem] top-[26rem] z-30"
+        className={`horizontal:hidden absolute left-[12rem] top-[28rem] z-30 tabletLandscape:hidden`}
       />
-      <img src={tracking} alt="image" className="absolute left-[6rem] z-40" />
+      <img
+        src={tracking}
+        alt="image"
+        className="horizontal:-top-[2rem] absolute left-[6rem] top-[2rem] z-40"
+      />
       <img
         src={cardAvatarOne}
         alt="image"

@@ -22,7 +22,7 @@ function ScreenSize() {
     };
   }, []);
 
-  return screenSize.width;
+  return [screenSize.width, screenSize.height];
 }
 
 export default ScreenSize;

@@ -46,6 +46,8 @@ export default {
         tabletLandscape: { max: "1023px" },
         // => @media (max-width: 1023px) { ... }
 
+        tabletMedium: { max: "900px" },
+
         tabletPortrait: { max: "767px" },
         // => @media (max-width: 767px) { ... }
 
@@ -54,6 +56,8 @@ export default {
         // smallScreen: { max: "460px" },
 
         smallPhone: { max: "380px" },
+
+        horizontal: { raw: "(max-height: 500px)" },
       },
       keyframes: {
         slideLeft: {
@@ -68,6 +72,9 @@ export default {
       animation: {
         slideLeft: "slideLeft 1.7s ease-out infinite",
         slideRight: "slideRight 1.7s ease-out infinite",
+      },
+      fontFamily: {
+        sans: ["Switzer", "sans-serif"],
       },
     },
   },

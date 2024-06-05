@@ -3,8 +3,11 @@ import groove from "../assets/groove.svg";
 import groove2 from "../assets/groove2.svg";
 import zwilt3 from "../assets/zwilt3.svg";
 import quotes from "../assets/quotes.svg";
+import { useState } from "react";
 
 function Reviews() {
+  const [isActive, setIsActive] = useState(false);
+
   return (
     <div className="relative flex -skew-y-[3deg] flex-col items-center justify-start bg-tertiary text-white">
       <div className="self-end">
@@ -14,7 +17,11 @@ function Reviews() {
         <div className="mb-12 flex w-1/2 flex-col leading-10 tabletPortrait:w-full tabletPortrait:pl-12 phone:pl-3">
           <div className="smallPhone:text-[2rem] text-[4rem] font-bold leading-[1] desktop:text-[3rem] phone:text-[2.5rem]">
             <h2>How it worked</h2>
-            <h2 className="inline-flex items-center">
+            <h2
+              className="inline-flex items-center"
+              onMouseEnter={() => setIsActive(true)}
+              onMouseLeave={() => setIsActive(false)}
+            >
               for Jason
               <img src={avatar2} alt="avatar" className="smallPhone:w-12 m-2" />
               at
@@ -42,14 +49,24 @@ function Reviews() {
         </div>
 
         <div className="flex w-1/2 flex-col tabletPortrait:w-10/12 tabletPortrait:pl-12 phone:w-full phone:pl-3">
-          <div className="mb-5 inline-flex items-center">
+          <div
+            className={`${isActive ? "opacity-100" : "opacity-95"} mb-5 inline-flex items-center transition-all duration-500`}
+          >
             <div className="mr-3">
-              <img src={groove2} alt="groove logo" className="w-16" />
+              <img
+                src={isActive ? avatar2 : groove2}
+                alt="groove logo"
+                className="w-16"
+              />
             </div>
             <div className="flex flex-col">
               <span className="text-[20px] font-bold">Jason Makki</span>
-              <span className="text-sm font-thin">Engineer at GROOVE</span>
-              <span className="text-sm font-thin">San Francisco</span>
+              <span className="text-sm font-thin">
+                Engineer at {isActive ? "FOGHORN LLC" : "GROOVE"}
+              </span>
+              <span className="text-sm font-thin">
+                {isActive ? "California" : "San Francisco"}
+              </span>
             </div>
           </div>
           <div className="w-4/5 tabletPortrait:w-full">

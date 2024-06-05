@@ -14,7 +14,8 @@ function ActionButton({
 }) {
   const [isActive, setIsActive] = useState(false);
 
-  const windowWidth = ScreenSize();
+  // eslint-disable-next-line no-unused-vars
+  const [windowWidth, windowHeight] = ScreenSize();
 
   if (windowWidth <= 639) disableAnimation = true;
 
